@@ -1,7 +1,7 @@
 // Express 環境
 const express = require("express");
 const app = express();
-const port = 3000;
+
 //- 載入 method-override
 const methodOverride = require("method-override");
 require("./config/mongoose"); //- 引用mongoose;
@@ -11,6 +11,6 @@ app.use(methodOverride("_method")); //- 設定每一筆請求都會透過 method
 app.use(routes); //- 將 request 導入路由器
 
 // 設定port
-app.listen(port, () => {
-  console.log(`http://localhost:${port}`);
+app.listen(3000, () => {
+  console.log(`http://localhost:3000`);
 });
