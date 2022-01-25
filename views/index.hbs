@@ -1,1 +1,19 @@
-<h2>Hello world! 這是 index</h2>
+<div class="row text-center">
+  <form action="/urls" method="POST">
+  <label for="fullUrl"></label>
+    <input
+      type="url"
+      name="fullUrl"
+      id="fullUrl"
+      placeholder="Input URL here"
+      size="60"
+      required
+    />
+    <div class="mt-3">
+      <button
+        type="submit"
+        class="btn btn-outline-primary btn-lg"
+      >Shorten</button>
+    </div>
+  </form>
+</div>
