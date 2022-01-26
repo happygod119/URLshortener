@@ -45,4 +45,4 @@ http://localhost:3000
 - MongoDB
 - mongoose 6.1.8
 - shortid 2.2.16
--valid-url 1.0.9
+- valid-url 1.0.9
