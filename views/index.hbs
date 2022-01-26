@@ -1,6 +1,13 @@
 <div class="row text-center">
   <form action="/urls" method="POST">
-  <label for="fullUrl"></label>
+    {{#if error}}
+      <div class="text-danger"><h1>已建立或網址格式不對</h1></div>
+            <a href="/">
+        <button type="button" class="btn btn-outline-secondary mt-3">
+          返回
+        </button></a>
+    {{else}}
+    <label for="fullUrl"></label>
     <input
       type="url"
       name="fullUrl"
@@ -17,3 +24,4 @@
     </div>
   </form>
 </div>
+{{/if}}

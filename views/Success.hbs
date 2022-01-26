@@ -1,13 +1,19 @@
 <form action="/urls" method="post">
-  <div class="card-body">
-    <div class="d-flex flex-column">
-      <div> Success! Please use this link:</div>
+  <div class="card-body mt-3">
+    <div class="d-flex flex-column text-center">
+      <h2> Success! Please use this link:</h2>
       <div type="textarea" id="shortUrl">{{{shortUrl}}}</div>
-      <button
-        type="button"
-        class="btn btn-primary btn-sm w-50 mx-auto mt-2"
-        id="copyButton"
-      >Copy</button>
+      <div class="d-grid gap-2 d-md-block">
+        <button
+          type="submit"
+          class="btn btn-outline-primary btn-lg mt-3"
+        >Copy</button>
+        <a href="/">
+          <button type="button" class="btn btn-outline-secondary btn-lg mt-3">
+            Back
+          </button></a>
+      </div>
+
     </div>
   </div>
 </form>

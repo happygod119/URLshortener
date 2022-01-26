@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Url = require("../../models/url");
 const shortid = require("shortid");
-const validUrl = require("valid-url");
+const validUrl = require("valid-url");//- 判斷傳入的url是否合規定
 
 router.post("/", async (req, res) => {
   const fullUrl = req.body.fullUrl;
@@ -12,7 +12,7 @@ router.post("/", async (req, res) => {
   if (url) {
     res.render("Success", { shortUrl });
   } else {
-    const shortId = shortid.generate();
+    const shortId = shortid.generate();;
     let shortUrl = `http://localhost:3000/${shortId}`;
     url = new Url({
       fullUrl,
@@ -21,9 +21,10 @@ router.post("/", async (req, res) => {
     await url.save();
     res.render("Success", { shortUrl });
   }}catch (error) {
-      res.status(500).json('Server error');
+      res.render("index", { error: true });
   }
 };
 })
+
 
 module.exports = router;
