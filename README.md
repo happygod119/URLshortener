@@ -34,7 +34,7 @@ npm run start
 5.若出現此行網址代表運行順利
 
 ```
-Express is listening on http://localhost:3000
+http://localhost:3000
 ```
 
 ## 開發工具
